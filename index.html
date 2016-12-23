@@ -11,6 +11,10 @@ body {
     font-family: Arial;
 }
 
+h1 {
+    text-align: center;
+}
+
 .row {
     width: 100%;
     display: block;
@@ -67,6 +71,7 @@ function kaboom() {
     $('body').css('background', 'white');
     $('body').css('color', 'black');
     $('body').append('<h1>Message destroyed</h1>');
+    $('h1').slideUp('slow');
 }
 </script>
 </body>
