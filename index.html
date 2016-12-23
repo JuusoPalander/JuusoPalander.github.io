@@ -26,7 +26,8 @@ h3 {
 }
 
 </style>
-<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<body id="page">
 <div class="row">
     <h3>Welcome</h3>
     <audio src="/welcome.mp3" controls></audio>
@@ -58,7 +59,15 @@ h3 {
 
 <div class="row">
     <h3>#6 Clue</h3>
-    <audio src="/clue6.mp3" controls></audio>
+    <audio src="/clue6.mp3" controls onended="kaboom()"></audio>
 </div>
+<script>
+function kaboom() {
+    $('.row').hide();
+    $('body').css('background', 'white');
+    $('body').css('color', 'black');
+    $('body').append('<h1>Message destroyed</h1>');
+}
+</script>
 </body>
 </html>
